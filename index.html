@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>Jogo da velha</title>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="css/style.css">
+
+		<script src="js/jquery-2.2.1.js"></script>
+	</head>
+
+	<body>
+
+		<div class="container">
+			<div class="jumbotron p-1 ">
+				<p class="display-4 text-center">Jogo da Velha</p>
+			</div>
+
+			<div id="pagina_inicial" class="row justify-content-center">
+				<div class="col-sm-3 text-center">
+					<div class="form-group">
+						<label for="entrada_apelido_jogador_1">
+							<img src="imagens/jogador_1.png" alt="jogador um">
+						</label>
+						<input id="entrada_apelido_jogador_1" class="form-control text-center border-0" type="text" maxlength="10" placeholder="Apelido Jogaor 1">
+					</div>
+					
+				</div>
+				<div class="col-sm-2 text-center my-auto">
+					<img id="btn_iniciar_jogo" src="imagens/iniciar.png" alt="iniciar" >
+				</div>
+				<div class="col-sm-3 text-center">
+					<label for="entrada_apelido_jogador_2">
+						<img src="imagens/jogador_2.png" alt="jogador dois">
+					</label>
+					<input id="entrada_apelido_jogador_2" class="form-control text-center border-0" type="text" maxlength="10" placeholder="Apelido Jogaor 2">
+				</div>
+			</div>
+		
+
+			<div id="palco_jogo" class="row mt-2 d-none">
+				<div class="col-3 text-center my-auto">
+					<img id="jogador01" src="imagens/jogador_1.png" />
+					<br />
+					<span id="nome_jogador_1"></span>
+				</div>
+				<div class="col-6">
+					<div class="row">
+						<div id="00" class="col bg celula-jogo jogada border-right border-bottom border-danger"></div>
+						<div id="01" class="col bg celula-jogo jogada border-bottom border-danger"></div>
+						<div id="02" class="col bg celula-jogo jogada border-left border-bottom border-danger"></div>
+					</div>
+					<div class="row">
+						<div id="10" class="col bg celula-jogo jogada border-right border-danger"></div>
+						<div id="11" class="col bg celula-jogo jogada"></div>
+						<div id="12" class="col bg celula-jogo jogada border-left border-danger"></div>
+					</div>
+					<div class="row">
+						<div id="20" class="col bg celula-jogo jogada border-right border-top border-danger"></div>
+						<div id="21" class="col bg celula-jogo jogada border-top border-danger"></div>
+						<div id="22" class="col bg celula-jogo jogada border-left border-top border-danger"></div>
+					</div>
+				</div>
+				<div class="col-3 text-center my-auto">
+					<img id="jogador02" src="imagens/jogador_2.png" />
+					<br />
+					<span id="nome_jogador_2"></span>
+				</div>
+
+			</div>
+
+			<div id="vitoria" class="row mt-2 d-none justify-content-center">
+				<span id="vencedor" class="display-3 text-primary"></span>
+			</div>
+
+		</div>
+
+
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
